@@ -18,10 +18,19 @@ const DetailsTableRow = ( props ) => {
         })
     }
 
+    const handleChange = (e) => {
+        setWeatherData((prev) => {
+            const dataArr = [...prev];
+            return dataArr.map((obj) => {
+                return obj.id === id ? {...obj, description: e.target.value} : obj;
+            })
+        })
+    }
+
     return (
         <tr className='flex' style={highlightenedCity === city ? {backgroundColor:'orange'} : {}}>
             <td className='border border-solid border-black flex-1 py-1 px-1 flex items-center'>{city}</td>
-            <td className='md:block border border-solid border-black flex-1 py-1 px-1 flex justify-center hidden'><input className='border border-solid border-black p-1 rounded-md' value={description} /></td>
+            <td className='md:block border border-solid border-black flex-1 py-1 px-1 flex justify-center hidden'><input className='border border-solid border-black p-1 rounded-md' onChange={handleChange} value={description} /></td>
             <td className='border border-solid border-black flex-1 py-1 px-1 flex items-center'>{temperature}</td>
             <td className='border border-solid border-black flex-1 py-1 px-1 flex items-center'>{pressure}</td>
             <td className='border border-solid border-black flex-1 py-1 px-1 flex items-center'>{dataAge}</td>
