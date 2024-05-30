@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Weather Details Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Build a web app that displays weather details of different cities and allows a user to search for the weather details of a particular city. The application fetches data from a weather API and dynamically updates the UI based on user interactions.
 
-In the project directory, you can run:
+## Functionalities
 
-### `npm start`
+1. **Get Weather Button:**
+   - The user clicks on the “Get Weather” button.
+   - The web app highlights the first row in the “City list” table with a green border.
+   - The web app fetches the JSON information from the API.
+     - Method: GET
+     - URL: `https://python3-dot-parul-arena-2.appspot.com/test?cityname=<city name in the current row>`
+     - Example: `https://python3-dot-parul-arena-2.appspot.com/test?cityname=London`
+   - Weather information is fetched and inserted into the table.
+   - The web app then highlights the next city and repeats the process for all cities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Editable Description Field:**
+   - The Description field in the "Details" table is a text input and is editable by the user.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Data Age Calculation:**
+   - The value of "Data age" is calculated as "(Current date time - data_and_time)" and expressed in hours.
 
-### `npm test`
+4. **Dynamic Row Addition:**
+   - Every time a city's weather information is fetched, a new row is added to the "Details" table.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Delete Row:**
+   - Clicking the Delete button will delete the corresponding row from the table.
 
-### `npm run build`
+6. **Data Storage:**
+   - Table data is stored in a dictionary/JS object as rows are added to the table.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **Search Functionality:**
+   - The user enters a city name in the search input box and clicks on the Search button.
+   - If the city name is present in the "Details" table, that row is highlighted in yellow color for 3 seconds.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Additional Packages Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Axios:** For making HTTP requests to the weather API.
+- **React.js:** For building the user interface and managing state.
+- **Tailwind CSS:** For styling the application.
 
-### `npm run eject`
+## Learnings
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **API Integration:** Improved skills in integrating external APIs to fetch and display data.
+- **State Management:** Enhanced understanding of managing state in React applications.
+- **User Experience:** Gained experience in creating interactive and user-friendly interfaces.
+- **Asynchronous Programming:** Deepened knowledge of handling asynchronous operations using async/await.
+- **Date and Time Manipulation:** Learned efficient ways to manipulate and calculate dates and times.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Improvements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Error Handling:** Implement more robust error handling for API requests.
+- **Optimized Search:** Enhance the search functionality to provide instant results and suggestions.
+- **Data Caching:** Implement caching mechanisms to reduce redundant API calls and improve performance.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Images
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![img1](https://github.com/Rachitgarg56/weather-app-fa2/assets/112542259/042fc74f-361c-4e91-b422-650acd0f362d)
+![img2](https://github.com/Rachitgarg56/weather-app-fa2/assets/112542259/5a1b9088-4746-4fd7-9a2e-57609343ab78)
